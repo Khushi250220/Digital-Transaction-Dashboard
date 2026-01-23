@@ -1,41 +1,182 @@
- Understanding the Project Structure
- 
-Our PhonePe Data Analysis Project revolves around creating a 5-page Power BI dashboard that displays various transaction and service metrics. The primary goal is to track the following key services:
+<!DOCTYPE html>
 
-Insurance Payments
-Loans
-Money Transfers
-Creating the Homepage
-The homepage will summarize the entire project. Key metrics to be displayed include:
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonePe Data Analysis Project - Power BI</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f9f9fb;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #5b2d8b; /* PhonePe Purple */
+        }
+        h1 {
+            border-bottom: 3px solid #5b2d8b;
+            padding-bottom: 10px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
 
-Total Transaction Amount: The total amount transacted via PhonePe.
-Failed Payments: A visualization that tracks failed transactions and identifies the reasons (e.g., server errors, insufficient balance).
-Date Range: A slicer that allows users to select different time periods to analyze transactions.
-For each service, you will show the total transaction amounts and the number of successful payments.
+```
+<h1>📊 PhonePe Data Analysis Project (Power BI)</h1>
 
-2. Service-Specific Dashboards
-Next, you’ll create individual tabs for each service. The details of each service, such as insurance, loans, and money transfers, will be displayed in separate pages.
+<section>
+    <h2>Project Overview</h2>
+    <p>
+        This project focuses on building a <strong>5-page interactive Power BI dashboard</strong> to analyze
+        PhonePe transaction data across multiple digital payment services. The dashboard provides insights
+        into transaction performance, service-wise trends, and failed payment analysis to support
+        data-driven business decisions.
+    </p>
+    <p>The analysis covers the following services:</p>
+    <ul>
+        <li>Insurance Payments</li>
+        <li>Loans</li>
+        <li>Money Transfers</li>
+        <li>Recharge &amp; Bill Payments</li>
+    </ul>
+</section>
 
-For insurance, you’ll break down transactions into categories like term life insurance, car insurance, health insurance, etc.
-Similarly, for loans, you’ll analyze loan types, such as auto loans and personal loans.
-Each page will contain the following visualizations:
+<section>
+    <h2>1. Homepage Dashboard</h2>
+    <p>The homepage provides a consolidated summary of the entire dataset using key performance indicators (KPIs).</p>
 
-Amount vs. Month: A graph showing the total amount transacted each month.
-Service vs. Amount: A bar chart displaying the contribution of each service to the total transaction amount.
-Payment Status: A pie chart illustrating the payment status (successful vs. failed payments).
-3. Failed Payment Analysis
-A crucial part of the project is monitoring failed payments. In this section, you’ll analyze why certain transactions failed. This will be displayed in a pie chart showing the reasons for failure (e.g., server error, wrong payment details, insufficient balance). Tracking failed payments is essential for businesses to identify issues and take corrective actions.
+    <h3>Key Metrics</h3>
+    <ul>
+        <li><strong>Total Transaction Amount:</strong> Total value of all transactions processed via PhonePe</li>
+        <li><strong>Failed Payments:</strong> Visualization of failed transactions with detailed failure reasons</li>
+        <li><strong>Date Range Slicer:</strong> Enables analysis across selected time periods</li>
+    </ul>
 
+    <h3>Service Summary</h3>
+    <ul>
+        <li>Total transaction amount for each service</li>
+        <li>Total number of successful payments per service</li>
+    </ul>
+</section>
 
-4. Creating Interactivity
-One of the highlights of this project is the interactivity. By using Power BI’s slicers, you can make the dashboard interactive. For example, users can select different date ranges, and the data displayed will automatically update based on the selection. This feature makes the dashboard more dynamic and useful for decision-makers.
+<section>
+    <h2>2. Service-Specific Dashboards</h2>
 
-5. Visual Customization
-In Power BI, you can customize the appearance of your dashboard. For this project, you’ll use PhonePe’s purple color theme to keep the dashboard visually aligned with the brand. You can also adjust font styles, add shadows, and customize the visual appearance of the slicers and charts to make the dashboard user-friendly and visually appealing.
+    <h3>Insurance Dashboard</h3>
+    <ul>
+        <li>Term Life Insurance</li>
+        <li>Health Insurance</li>
+        <li>Car Insurance</li>
+        <li>Other Insurance Categories</li>
+    </ul>
 
-6. Final Touches: Linking the Pages
-Once you have created all the pages for each service (home, insurance, loans, money transfer, recharge & bills), the next step is to link these pages together for easy navigation. This can be done by creating buttons in  Power BI, which will allow users to switch between different sections of the dashboard seamlessly.
+    <h3>Loan Dashboard</h3>
+    <ul>
+        <li>Personal Loans</li>
+        <li>Auto Loans</li>
+        <li>Other Loan Categories</li>
+    </ul>
 
+    <h3>Money Transfer &amp; Recharge/Bills Dashboard</h3>
+    <p>Displays service-wise transaction trends and overall performance metrics.</p>
+
+    <h3>Common Visualizations</h3>
+    <ul>
+        <li><strong>Amount vs Month:</strong> Monthly transaction trend analysis</li>
+        <li><strong>Service vs Amount:</strong> Contribution of each service</li>
+        <li><strong>Payment Status:</strong> Successful vs failed payments</li>
+    </ul>
+</section>
+
+<section>
+    <h2>3. Failed Payment Analysis</h2>
+    <p>This section focuses on identifying the reasons behind failed transactions.</p>
+    <ul>
+        <li>Server Errors</li>
+        <li>Insufficient Balance</li>
+        <li>Incorrect Payment Details</li>
+    </ul>
+    <p>A pie chart is used to represent the distribution of failed payment reasons.</p>
+</section>
+
+<section>
+    <h2>4. Dashboard Interactivity</h2>
+    <ul>
+        <li>Date slicers for time-based filtering</li>
+        <li>Cross-filtering between visuals</li>
+        <li>Dynamic updates based on user selections</li>
+    </ul>
+    <p>This interactivity allows stakeholders to explore data intuitively.</p>
+</section>
+
+<section>
+    <h2>5. Visual Customization &amp; Branding</h2>
+    <ul>
+        <li>PhonePe purple color theme</li>
+        <li>Customized fonts and slicers</li>
+        <li>Enhanced formatting and shadows for better readability</li>
+    </ul>
+</section>
+
+<section>
+    <h2>6. Page Navigation</h2>
+    <p>Navigation buttons are used to link all dashboard pages seamlessly.</p>
+    <ul>
+        <li>Home</li>
+        <li>Insurance</li>
+        <li>Loans</li>
+        <li>Money Transfers</li>
+        <li>Recharge &amp; Bills</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Tools and Technologies</h2>
+    <ul>
+        <li>Microsoft Power BI</li>
+        <li>DAX (Data Analysis Expressions)</li>
+        <li>Microsoft Excel</li>
+        <li>Business Intelligence &amp; Data Visualization</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Key Skills Demonstrated</h2>
+    <ul>
+        <li>Data Analysis and Reporting</li>
+        <li>Interactive Dashboard Design</li>
+        <li>Business Intelligence</li>
+        <li>Transaction and Payment Analysis</li>
+        <li>FinTech Data Analytics</li>
+    </ul>
+</section>
+
+<footer>
+    <p>⭐ PhonePe Power BI Data Analysis Project</p>
+</footer>
+```
+
+</body>
+</html>
 
 
                                                   HOME DASHBOARD
